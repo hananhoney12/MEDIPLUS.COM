@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<!-- djlint:off H016,H019,H030,H031 -->
+<html lang="en">
+
+  <head>
+  <title>Doctronic  - Your Trusted AI Doctor</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Doctronic">
+  <meta name="description" content="Doctronic is your personal and private AI-powered doctor. Get free and immediate access to comprehensible health information with real-time issue and symptom explorations and action plans. We promote educated interactions between patients and healthcare providers, making healthcare more accessible and efficient. Experience the future of healthcare.">
+  <meta name="facebook-domain-verification" content="ev45vzbg8etov6f9icw11apez3ctvi">
+  <meta name="keywords" content="Doctronic, AI Doctor, Private AI Medical Helper, Digital Advisor, Personalized Health Information, Real-time Analysis, Accessible Health Platform, Comprehensive History, Patient-Provider Interaction, B2C Healthline, B2B MD, GAIM, Digital Health Care Systems">
+  <meta name="msapplication-TileColor" content="#603CBA">
+  <meta name="msvalidate.01" content="9B06386BACDCFFDF742754747DF8FF68">
+  <meta name="theme-color" content="#FAFAFA">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://static.doctronic.ai/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://static.doctronic.ai/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://static.doctronic.ai/img/favicon-32x32.png">
+  <link rel="icon" type="image/svg+xml" href="https://static.doctronic.ai/img/doctronic-icon.svg">
+  <link rel="manifest" href="https://static.doctronic.ai/img/site.webmanifest">
+  <link rel="mask-icon" href="https://static.doctronic.ai/img/safari-pinned-tab.svg" color="#5bbad5">
+  
+  
+    <!-- prod -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://static.doctronic.ai/css/base.css?t=241025002257">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
+    <script src="https://static.doctronic.ai/js/1-globals.js?t=241025002257"></script>
+    <script src="https://static.doctronic.ai/js/2-doctronic-state.js?t=241025002257"></script>
+    <script src="https://static.doctronic.ai/js/3-functions.js?t=241025002257"></script>
+    <script src="https://static.doctronic.ai/js/4-main.js?t=241025002257"></script>
+  
+</head>
+
+  <body class="d-flex flex-column min-vh-100" data-is-logged-in="false">
+    <header>
+  <!-- notification-bar -->
+  <div class="notification-bar notification-bar-bg fixed-top w-100 text-small text-white text-center p-1" role="alert" id="notification-bar">
+    <a href="/member/register" class="link-dark link-underline-opacity-0">
+      <img src="https://static.doctronic.ai/img/doctronic-icon.svg" height="10" style="margin-right: 2px; vertical-align: baseline" class="d-inline-block" alt="Doctronic AI doctor">
+      Doctronic Concierge opens soon!
+      <span class="d-sm-none d-inline">
+        <br>
+      </span>
+    Join Doctronic to experience the future of healthcare!</a>
+  </div>
+
+  <div class="container position-relative">
+    <!-- navigation-button (offcanvas toggle) -->
+    <button class="navigation-button position-fixed top-0 start-0 m-2" style="z-index: 1030" type="button" data-bs-toggle="offcanvas" data-bs-target="#doctronic-navigation" aria-controls="doctronic-navigation" aria-expanded="false" aria-label="Toggle navigation" id="navigation-button">
+      <i class="bi bi-list fs-5"></i>
+    </button>
+
+    <!-- membership-button -->
+    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#membership-offcanvas" class="membership-button position-fixed top-0 end-0 m-2 avatar-icon-anonymous-user-F d-lg-none" style="z-index: 1030" aria-label="Access membership" id="membership-button">
+    </a>
+  </div>
+
+  <!-- doctronic-navigation (offcanvas) -->
+  <div class="offcanvas offcanvas-start offcanvas-custom offcanvas-fast-transition" tabindex="-1" aria-label="Main navigation" id="doctronic-navigation">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close ms-0 ps-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="flex-grow-1">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <img src="https://static.doctronic.ai/img/doctronic-icon.svg" height="12" style="vertical-align: baseline" class="d-inline-block" alt="Doctronic AI doctor">
+              Doctronic
+            </a>
+          </li>
+      <div class="mt-auto"><div class="container">
+    <div class="d-flex justify-content-center align-items-center" id="share-social-buttons">
+        <a href="mailto:?subject=Doctronic%20-%20Your%20Trusted%20AI%20Doctor&body=Check out Doctronic: https://www.doctronic.ai" target="_blank" class="btn share-btn-social-general share-btn-email me-2" id="button-share-email">
+            <i class="bi bi-envelope-arrow-up-fill"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer.php?t=Doctronic%20-%20Your%20Trusted%20AI%20Doctor&u=https://www.doctronic.ai" target="_blank" class="btn share-btn-social-general share-btn-facebook me-2" id="button-share-facebook">
+            <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.linkedin.com/shareArticle?title=Doctronic%20-%20Your%20Trusted%20AI%20Doctor&url=https://www.doctronic.ai" target="_blank" class="btn share-btn-social-general share-btn-linkedin me-2" id="button-share-linkedin">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://reddit.com/submit?title=Doctronic%20-%20Your%20Trusted%20AI%20Doctor&url=https://www.doctronic.ai" target="_blank" class="btn share-btn-social-general share-btn-reddit me-2" id="button-share-reddit">
+            <i class="bi bi-reddit"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=https://www.doctronic.ai" target="_blank" class="btn share-btn-social-general share-btn-whatsapp me-2" id="button-share-whatsapp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="https://twitter.com/intent/tweet?text=Doctronic%20-%20Your%20Trusted%20AI%20Doctor&url=https://www.doctronic.ai" target="_blank" class="btn share-btn-social-general share-btn-x" id="button-share-x">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+    </div>
+</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- doctronic-membership (offcanvas) -->
+<div class="offcanvas offcanvas-end offcanvas-custom offcanvas-fast-transition d-lg-none" tabindex="-1" id="membership-offcanvas">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    
+    <div class="accordion" id="offcanvas-member-accordion">
+
+    
+    <!-- Doctronic Concierge -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvas-concierge-collapse" aria-controls="offcanvas-concierge-collapse" aria-expanded="true">
+        Concierge
+      </button>
+    </h2>
+    <div id="offcanvas-concierge-collapse" class="accordion-collapse collapse show">
+      <div class="accordion-body ehr-accordion-body">
+        <div class="text-slight">
+          Doctronic Concierge membership gives you free access to our best AI doctors plus real human doctors on call. Anytime, anywhere, this is premium healthcare without the premium price. Join today.
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- AI Doctor Notes -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvas-doctor-notes-collapse" aria-controls="offcanvas-doctor-notes-collapse">
+        AI Doctor Notes
+      </button>
+    </h2>
+    <div id="offcanvas-doctor-notes-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body">
+        
+          <div class="text-small">
+            Please <a href="/member/login">log in</a> to view your AI doctor notes.
+          </div>
+          <div class=" text-small mt-1 mb-2">
+            If you are not a member, please consider <a href="/member/register">becoming a member</a>.
+          </div>
+          <div class=" text-small mt-1 mb-1">
+            Members gain full access to the best medical AI. You may read more about member benefits in our <a href="/resource-center.html">resource center</a>.
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Symptoms -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvas-ehr-symptoms-collapse" aria-controls="offcanvas-ehr-symptoms-collapse">
+        Symptoms
+      </button>
+    </h2>
+    <div id="offcanvas-ehr-symptoms-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        
+          <div class="overlay-members-only">
+  <span class="badge bg-danger shadow">Members Only</span>
+</div>
+        
+        <div id="ehr-symptoms-current" class="overlay-blur">
+          <div class="ehr-content-header">Current</div>
+          <div class="symptoms-list text-small"></div>
+        </div>
+        <div id="ehr-symptoms-past" class="overlay-blur">
+          <div class="ehr-content-header">Past</div>
+          <div class="symptoms-list text-small"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- General Health -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvas-ehr-general-health-collapse" aria-controls="offcanvas-ehr-general-health-collapse">
+        General Health
+      </button>
+    </h2>
+    <div id="offcanvas-ehr-general-health-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        
+          <div class="overlay-members-only">
+  <span class="badge bg-danger shadow">Members Only</span>
+</div>
+        
+        <form id="offcanvas-ehr-general-health-form" class="overlay-blur">
+          <div class="ehr-form-group">
+            <label for="ehr-weight" class="form-label ehr-form-label">Weight</label>
+            <div class="input-group">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-weight" min="1" max="999" data-object-id="generalHealth.weight.weight">
+              <select class="form-select ehr-form-select ehr-form-select-xxs" id="offcanvas-ehr-weight-unit" data-object-id="generalHealth.weight.unit">
+                <option value="lbs">lbs</option>
+                <option value="kg">kg</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-height-feet" class="form-label ehr-form-label">Height</label>
+            <div class="input-group">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-height-feet" placeholder="feet" min="0" max="8" data-object-id="generalHealth.height.feet">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-height-inches" placeholder="inches" min="0" max="11" data-object-id="generalHealth.height.inches">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs d-none" id="offcanvas-ehr-height-cm" placeholder="cm" min="0" max="280" data-object-id="generalHealth.height.height">
+              <select class="form-select ehr-form-select ehr-form-select-xxs" id="offcanvas-ehr-height-unit" data-object-id="generalHealth.height.unit">
+                <option value="cm">cm</option>
+                <option value="inches">ft/in</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-waist-circumference" class="form-label ehr-form-label">Waist circumference</label>
+            <div class="input-group">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-waist-circumference" min="1" max="200" data-object-id="generalHealth.waistCircumference.waistCircumference">
+              <select class="form-select ehr-form-select ehr-form-select-xxs" id="offcanvas-ehr-waist-circumference-unit" data-object-id="generalHealth.waistCircumference.unit">
+                <option value="inches">in</option>
+                <option value="cm">cm</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-hip-circumference" class="form-label ehr-form-label">Hip circumference</label>
+            <div class="input-group">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-hip-circumference" min="1" max="200" data-object-id="generalHealth.hipCircumference.hipCircumference">
+              <select class="form-select ehr-form-select ehr-form-select-xxs" id="offcanvas-ehr-hip-circumference-unit" data-object-id="generalHealth.hipCircumference.unit">
+                <option value="inches">in</option>
+                <option value="cm">cm</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-blood-type" class="form-label ehr-form-label">Blood type</label>
+            <select class="form-select ehr-form-select ehr-form-select-xxs" id="offcanvas-ehr-blood-type" data-object-id="generalHealth.bloodType.bloodType">
+              <option value=""></option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-vision-correction" class="form-label ehr-form-label">Vision correction</label>
+            <select class="form-select ehr-form-select ehr-form-select-xs" id="offcanvas-ehr-vision-correction" data-object-id="generalHealth.visionCorrection.visionCorrectionType">
+              <option value=""></option>
+              <option value="Glasses">Glasses</option>
+              <option value="Contacts">Contacts</option>
+              <option value="LASIK">LASIK</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Medical History -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvas-ehr-medical-history-collapse" aria-controls="offcanvas-ehr-medical-history-collapse">
+        Medical History
+      </button>
+    </h2>
+    <div id="offcanvas-ehr-medical-history-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        
+          <div class="overlay-members-only">
+  <span class="badge bg-danger shadow">Members Only</span>
+</div>
+        
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Medications -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvas-ehr-medications-collapse" aria-controls="offcanvas-ehr-medications-collapse">
+        Medications
+      </button>
+    </h2>
+    <div id="offcanvas-ehr-medications-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        
+          <div class="overlay-members-only">
+  <span class="badge bg-danger shadow">Members Only</span>
+</div>
+        
+        <div class="medications">
+          <div class="current-medications text-small overlay-blur">
+            <div class="ehr-content-header">Current</div>
+          </div>
+          <div class="past-medications text-small overlay-blur">
+            <div class="ehr-content-header">Past</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Demographics -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvas-ehr-demographics-collapse" aria-controls="offcanvas-ehr-demographics-collapse">
+        Demographics
+      </button>
+    </h2>
+    <div id="offcanvas-ehr-demographics-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        <div class="overlay-coming-soon">
+  <span class="badge bg-info shadow">Coming Soon</span>
+</div>
+        <form id="offcanvas-ehr-demographics-form" class="overlay-blur">
+          <div class="row">
+            <div class="col-auto me-3 ehr-form-group">
+              <label for="ehr-age" class="form-label ehr-form-label">Age</label>
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-age" min="0" max="120" data-object-id="demographics.age">
+            </div>
+            <div class="col-auto ehr-form-group">
+              <label for="ehr-biological-sex" class="form-label ehr-form-label">Biological sex</label>
+              <select class="form-select ehr-form-select ehr-form-select-s" id="offcanvas-ehr-biological-sex" data-object-id="demographics.sex">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-race-ethnicity" class="form-label ehr-form-label">Race and ethnicity</label>
+            <input type="text" class="form-control ehr-form-control ehr-form-control-s" id="offcanvas-ehr-race-ethnicity" maxlength="50" data-object-id="demographics.raceEthnicity">
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-gender-identity" class="form-label ehr-form-label">Gender identity</label>
+            <input type="text" class="form-control ehr-form-control ehr-form-control-s" id="offcanvas-ehr-gender-identity" maxlength="100" data-object-id="demographics.genderIdentity">
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-preferred-language" class="form-label ehr-form-label">Preferred language</label>
+            <input type="text" class="form-control ehr-form-control ehr-form-control-s" id="offcanvas-ehr-preferred-language" maxlength="30" data-object-id="demographics.preferredLanguage">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Vital Signs -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvas-ehr-vital-signs-collapse" aria-controls="offcanvas-ehr-vital-signs-collapse">
+        Vital Signs
+      </button>
+    </h2>
+    <div id="offcanvas-ehr-vital-signs-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        <div class="overlay-coming-soon">
+  <span class="badge bg-info shadow">Coming Soon</span>
+</div>
+        <form id="offcanvas-ehr-vital-signs-form" class="overlay-blur">
+          <div class="ehr-form-group">
+            <label for="ehr-heart-rate" class="form-label ehr-form-label">Heart rate</label>
+            <div class="d-flex align-items-center">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-heart-rate" min="30" max="220" data-object-id="vitalSigns.heartRate.heartRate">
+              <span class="ms-2 text-small">bpm</span>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-systolic" class="form-label ehr-form-label">Blood pressure</label>
+            <div class="d-flex align-items-center">
+              <div class="input-group align-items-center">
+                <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-systolic" placeholder="systolic" min="60" max="250" data-object-id="vitalSigns.systolic">
+                <span class="input-group-text ehr-input-group-text-xs">/</span>
+                <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-diastolic" placeholder="diastolic" min="40" max="150" data-object-id="vitalSigns.diastolic">
+                <span class="ms-2 text-small">mmHg</span>
+              </div>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-respiratory-rate" class="form-label ehr-form-label">Respiratory rate</label>
+            <div class="d-flex align-items-center">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-respiratory-rate" min="8" max="40" data-object-id="vitalSigns.respiratoryRate.respiratoryRate">
+              <span class="ms-2 text-small">breaths/min</span>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-oxygen-saturation" class="form-label ehr-form-label">Oxygen saturation</label>
+            <div class="d-flex align-items-center">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-oxygen-saturation" min="70" max="100" data-object-id="vitalSigns.oxygenSaturation.oxygenSaturation">
+              <span class="ms-2 text-small">%</span>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-body-temperature" class="form-label ehr-form-label">Body temperature</label>
+            <div class="input-group">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-body-temperature" step="0.1" min="95" max="108" data-object-id="vitalSigns.bodyTemperature.bodyTemperature">
+              <select class="form-select ehr-form-select ehr-form-select-xxs" id="offcanvas-ehr-temperature-unit" data-object-id="vitalSigns.bodyTemperature.unit">
+                <option value="°F">°F</option>
+                <option value="°C">°C</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-pain-scale" class="form-label ehr-form-label">Pain scale</label>
+            <div class="d-flex align-items-center">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="offcanvas-ehr-pain-scale" min="0" max="10" data-object-id="vitalSigns.painScale.painLevel">
+              <span class="ms-2 text-small">(0 to 10)</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Social History -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvas-ehr-social-history-collapse" aria-controls="offcanvas-ehr-social-history-collapse">
+        Social History
+      </button>
+    </h2>
+    <div id="offcanvas-ehr-social-history-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        <div class="overlay-coming-soon">
+  <span class="badge bg-info shadow">Coming Soon</span>
+</div>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Pharmacy Information -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvas-ehr-pharmacy-collapse" aria-controls="offcanvas-ehr-pharmacy-collapse">
+        Pharmacy Information
+      </button>
+    </h2>
+    <div id="offcanvas-ehr-pharmacy-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        <div class="overlay-coming-soon">
+  <span class="badge bg-info shadow">Coming Soon</span>
+</div>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Insurance Information -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offcanvas-ehr-insurance-collapse" aria-controls="offcanvas-ehr-insurance-collapse">
+        Insurance Information
+      </button>
+    </h2>
+    <div id="offcanvas-ehr-insurance-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        <div class="overlay-coming-soon">
+  <span class="badge bg-info shadow">Coming Soon</span>
+</div>
+        <div id="ehr-primaryInsurance" class="overlay-blur">
+          <div class="ehr-content-header">Primary</div>
+          <div class="insurance-content"></div>
+        </div>
+        <div id="ehr-secondaryInsurance" class="overlay-blur">
+          <div class="ehr-content-header">Secondary</div>
+          <div class="insurance-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+</div>
+
+<!-- feedback modal -->
+<div class="modal fade" id="feedback-modal" tabindex="-1" aria-labelledby="feedback-modal-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Doctronic Feedback</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe width="100%" height="420" class="embed-responsive-item" src="https://forms.mk/PxLgGR"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container bg-white flex-grow-1">
+
+      <!-- Begin main-body -->
+      <div id="main-body" class="container-fluid">
+        <div class="row">
+
+          <!-- Begin main-content -->
+          <div class="col-12 col-lg-8 col-xl-9" id="main-content">
+            <form id="doc-ai-form" method="post">
+
+              <div class="d-flex flex-column align-items-center mt-5 mb-2">
+  <div class="avatar-icon avatar-icon-doctronic avatar-icon-header mb-2 mt-md-2 mt-lg-4 mt-xl-5" aria-label="Doctronic avatar"></div>
+  <div class="chat-bubble chat-bubble-center p-2">
+    <h5 class="header-doctronic">Hi, I'm Doctronic!</h5>
+  </div>
+</div>
+
+<div class="d-flex align-items-start mb-2">
+  <div class="avatar-icon avatar-icon-doctronic me-2" aria-label="Doctronic avatar"></div>
+  <div class="chat-bubble chat-bubble-left p-2">
+    <h1 class="body-text">I'm your <strong>private and personal</strong> AI doctor.</h1>
+  </div>
+</div>
+
+<div class="d-flex align-items-start mb-2" id="first-question-prompt">
+  <div class="avatar-icon avatar-icon-doctronic me-2" aria-label="Doctronic avatar"></div>
+  <div class="chat-bubble chat-bubble-left p-2">
+    Please tell me your age and sex to get started.
+  </div>
+</div>
+
+              <div class="d-flex justify-content-center align-items-center mb-2" id="age-sex-picker">
+                <div class="m-1 mx-4">
+                  <label class="text-tiny padding-tiny text-nowrap" for="age" id="ageLabel">Age (18+):</label>
+                  <input type="number" class="form-control" name="age" id="age" min="18" max="99" inputmode="numeric" oninput="limitInputLength(this, 2)" placeholder="" aria-describedby="ageLabel" required>
+                </div>
+                <div class="m-1">
+                  <label class="text-tiny padding-tiny text-nowrap" for="sexf">Biological sex:</label>
+                  <div class="p-2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="sex" id="sexf" value="F">
+                      <label class="form-check-label" for="sexf">F</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="sex" id="sexm" value="M">
+                      <label class="form-check-label" for="sexm">M</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-4" id="get-started-div">
+                <div class="text-center">
+                  <button type="button" class="btn btn-doctronic disabled" id="get-started-button" disabled>
+                    Get Started
+                  </button>
+                </div>
+              </div>
+
+              <div class="d-none d-flex align-items-end justify-content-end mb-2" id="get-started-uc">
+                <div class="chat-bubble chat-bubble-right text-start order-1 p-2">
+                  
+                </div>
+                <div class="avatar-icon avatar-icon-anonymous-user-F mb-auto order-2 ms-2" aria-label="Anonymous user avatar"></div>
+              </div>
+
+              <div class="d-none d-flex align-items-start mb-2" id="not-a-doctor-no-emergencies">
+  <div class="avatar-icon avatar-icon-doctronic me-2" aria-label="Doctronic avatar"></div>
+  <div class="chat-bubble chat-bubble-left p-2">
+    Ok. If this is an emergency, call 911 or your local emergency number.
+  </div>
+</div>
+
+<div class="d-none d-flex align-items-start mb-2" id="choose-path-prompt">
+  <div class="avatar-icon avatar-icon-doctronic me-2" aria-label="Doctronic avatar"></div>
+  <div class="chat-bubble chat-bubble-left p-2">
+    Would you like to <strong>diagnose a health issue</strong>, symptom, or problem? Or do you want to ask <strong>one quick question</strong>?
+  </div>
+</div>
+
+              <div class="d-none d-flex justify-content-center align-items-center mb-2" id="choose-path-buttons">
+                <button type="button" class="mx-3 my-2 btn btn-doctronic" id="diagnose-path">Diagnose a Health Issue</button>
+                <button type="button" class="mx-3 my-2 btn btn-doctronic" id="discuss-path">Ask One Quick Question</button>
+              </div>
+
+              <div class="d-none d-flex align-items-end justify-content-end mb-2" id="diagnose-path-uc">
+                <div class="chat-bubble chat-bubble-right text-start order-1 p-2">I'd like to diagnose a health issue or symptom.</div>
+                <div class="avatar-icon avatar-icon-anonymous-user-F mb-auto order-2 ms-2" aria-label="Anonymous user avatar"></div>
+              </div>
+
+              <div class="d-none d-flex align-items-end justify-content-end mb-2" id="discuss-path-uc">
+                <div class="chat-bubble chat-bubble-right text-start order-1 p-2">I'd like to ask one quick question.</div>
+                <div class="avatar-icon avatar-icon-anonymous-user-F mb-auto order-2 ms-2" aria-label="Anonymous user avatar"></div>
+              </div>
+
+              <div class="d-none d-flex align-items-start mb-2" id="first-question-answer">
+                <div class="avatar-icon avatar-icon-doctronic me-2" aria-label="Doctronic avatar"></div>
+                <div class="chat-bubble chat-bubble-left p-2">
+                  <span class="d-none" id="diagnose-path-fcp">Ok, I will ask you around 9 questions. It usually takes about 5 minutes to answer them all. Your answers give me the information I need to help you, so please be thorough. Let's start. What issue or symptom is bothering you?</span>
+                  <span class="d-none" id="discuss-path-fcp">Ok, what is your question?</span>
+                </div>
+              </div>
+
+              <!-- Begin conversation-body -->
+              <div id="conversation-body"></div>
+              <!-- End conversation-body -->
+
+              <div class="d-none" id="end-conversation">
+
+                <!-- Begin doctor evaluation -->
+                <div class="doctronic-doctor-evaluation" id="evaluation-1">
+                  <div class="d-flex align-items-start mb-2">
+                    <div class="avatar-icon avatar-icon-doctronic me-2" aria-label="Doctronic avatar"></div>
+                    <div class="chat-bubble chat-bubble-left p-2">
+                      Would you like to have a doctor licensed to practice medicine in your state evaluate this conversation and respond to you within one hour? A $5.00 fee applies.
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center mb-2" id="evaluation-button-1">
+                    <a href="#evaluation-1" target="_blank" class="btn btn-doctronic-evaluation my-2 mb-5">Evaluate This Conversation for $5.00</a>
+                  </div>
+                </div>
+                <!-- End doctor evaluation -->
+
+                <!-- Begin evaluation not available -->
+                <div class="doctronic-doctor-evaluation-unavailable d-none" id="evaluation-unavailable-1">
+                  <div class="d-flex align-items-start mb-2">
+                    <div class="avatar-icon avatar-icon-doctronic me-2" aria-label="Doctronic avatar"></div>
+                    <div class="chat-bubble chat-bubble-left p-2">
+                      We're sorry but a doctor evaluation is not yet available in your state. We're expanding our service area quickly so please check back soon.
+                    </div>
+                  </div>
+                </div>
+                <!-- End evaluation not available -->
+
+                <!-- Begin doctor referral -->
+                <div class="doctronic-referral d-none" id="referral-area-1">
+                  <div class="d-flex align-items-start mb-2">
+                    <div class="avatar-icon avatar-icon-doctronic me-2" aria-label="Doctronic avatar"></div>
+                    <div class="chat-bubble chat-bubble-left p-2">
+                      We suggest you see <strong><a href="https://zocdoc.pxf.io/id-primary-care-doctors" target="_blank" class="external-link updatable-referral-link-specialist-text" id="specialist-referral-link-chat-1">a Primary Care Doctor</a></strong>. Following this link to our partner may support Doctronic, so thank you very much.
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center mb-2">
+                    <a href="https://zocdoc.pxf.io/id-primary-care-doctors" target="_blank" class="btn btn-doctronic-referral my-2 mb-5 external-link updatable-referral-link-specialist-button" id="specialist-referral-link-chat-2">Schedule a Primary Care Doctor Appointment&nbsp;</a>
+                  </div>
+                </div>
+                <!-- End doctor referral -->
+
+                <!-- Begin SOAP notes -->
+                <div class="d-flex align-items-start mb-2">
+                  <div class="avatar-icon avatar-icon-doctronic me-2" aria-label="Doctronic avatar"></div>
+                  <div class="chat-bubble chat-bubble-left p-2">
+                    Thanks for using Doctronic! Please <a href="javascript:void(0)" id="button-copy-notes">copy your summary</a> and <a href="https://zocdoc.pxf.io/id-primary-care-doctors" target="_blank" class="external-link updatable-referral-link-specialist-text">discuss it with a doctor</a>. To view this conversation again, you may save <a href="chat_review_url" target="_blank" class="external-link" id="chat_review_url">this unique page</a>. If you signup to be a Doctronic Member all your conversations will be securely saved and contribute to your AI health record.
+                  </div>
+                </div>
+                <!-- End SOAP notes -->
+
+                <!-- Begin Stripe donation -->
+                <div class="d-flex align-items-start mb-2">
+                  <div class="avatar-icon avatar-icon-doctronic me-2" aria-label="Doctronic avatar"></div>
+                  <div class="chat-bubble chat-bubble-left p-2 mb-5">
+                    Was Doctronic helpful? Please consider <a href="https://buy.stripe.com/bIY28WbRJgw5ffOeV2" target="_blank" class="external-link" id="link-doctronic-donate">donating a small amount</a> to support us.
+                  </div>
+                </div>
+                <!-- End Stripe donation -->
+
+                <div class="d-flex align-items-start mb-2">
+                  <div class="p-2">
+                    Doctronic is not a doctor, does not provide medical advice, and may be incorrect. Doctronic is not responsible for any harm that may come to you as a result of using this service. Always <a href="https://zocdoc.pxf.io/doctronic-main-link" target="_blank" class="external-link doctor-referral-link-chat-end">follow up with a real doctor</a>.
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="d-none mt-3" id="input-container">
+                <textarea class="form-control py-3" name="user-input" id="user-input" rows="2" maxlength="1152" placeholder="Message..."></textarea>
+                <div id="user-input-counter" class="mt-1 text-end text-muted text-tiny">
+                  <span id="char-count">0</span>/1152 characters&nbsp;
+                </div>
+              </div>
+
+              <div class="d-none m-1" id="agree-terms">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="agree-terms-check" required>
+                  <label class="form-check-label text-small" for="agree-terms-check">
+                    I agree to the <a href="/terms-of-service.html">Doctronic Terms of Service</a> and will <a href="https://zocdoc.pxf.io/doctronic-main-link" target="_blank" class="external-link doctor-referral-link-agree-terms">discuss all Doctronic output with a doctor</a>.
+                  </label>
+                </div>
+              </div>
+
+              <div class="d-none my-4" id="submit-div">
+                <div class="text-center">
+                  <input type="submit" class="btn btn-doctronic" id="send-message" value="Send Message">
+                  <div class="d-none mx-auto spinner-border text-primary" id="spinner" role="status">
+                    <span class="sr-only" style="display:none;">Loading...</span>
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" name="csrf_token" id="csrf_token" value="233dc9fe460f37de822102c069c3a8a6">
+
+            </form>
+          </div>
+          <!-- End main-content -->
+
+          <!-- Begin membership-sidebar, hide on screens smaller than lg -->
+          <div class="col-lg-4 col-xl-3 d-none d-lg-block mt-5 mb-2 sticky-top" id="membership-sidebar">
+            <div class="d-flex align-items-center mb-2">
+              <div id="membership-icon" class="membership-button avatar-icon-anonymous-user-F me-2"></div>
+              <span class="text-small">Anonymous User</span>
+            </div>
+            
+            <div class="accordion" id="sidebar-member-accordion">
+
+    
+    <!-- Doctronic Concierge -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-concierge-collapse" aria-controls="sidebar-concierge-collapse" aria-expanded="true">
+        Concierge
+      </button>
+    </h2>
+    <div id="sidebar-concierge-collapse" class="accordion-collapse collapse show">
+      <div class="accordion-body ehr-accordion-body">
+        <div class="text-slight">
+          Doctronic Concierge membership gives you free access to our best AI doctors plus real human doctors on call. Anytime, anywhere, this is premium healthcare without the premium price. Join today.
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- AI Doctor Notes -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-doctor-notes-collapse" aria-controls="sidebar-doctor-notes-collapse">
+        AI Doctor Notes
+      </button>
+    </h2>
+    <div id="sidebar-doctor-notes-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body">
+        
+          <div class="text-small">
+            Please <a href="/member/login">log in</a> to view your AI doctor notes.
+          </div>
+          <div class=" text-small mt-1 mb-2">
+            If you are not a member, please consider <a href="/member/register">becoming a member</a>.
+          </div>
+          <div class=" text-small mt-1 mb-1">
+            Members gain full access to the best medical AI. You may read more about member benefits in our <a href="/resource-center.html">resource center</a>.
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Symptoms -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-ehr-symptoms-collapse" aria-controls="sidebar-ehr-symptoms-collapse">
+        Symptoms
+      </button>
+    </h2>
+    <div id="sidebar-ehr-symptoms-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        
+          <div class="overlay-members-only">
+  <span class="badge bg-danger shadow">Members Only</span>
+</div>
+        
+        <div id="ehr-symptoms-current" class="overlay-blur">
+          <div class="ehr-content-header">Current</div>
+          <div class="symptoms-list text-small"></div>
+        </div>
+        <div id="ehr-symptoms-past" class="overlay-blur">
+          <div class="ehr-content-header">Past</div>
+          <div class="symptoms-list text-small"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- General Health -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-ehr-general-health-collapse" aria-controls="sidebar-ehr-general-health-collapse">
+        General Health
+      </button>
+    </h2>
+    <div id="sidebar-ehr-general-health-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        
+          <div class="overlay-members-only">
+  <span class="badge bg-danger shadow">Members Only</span>
+</div>
+        
+        <form id="sidebar-ehr-general-health-form" class="overlay-blur">
+          <div class="ehr-form-group">
+            <label for="ehr-weight" class="form-label ehr-form-label">Weight</label>
+            <div class="input-group">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-weight" min="1" max="999" data-object-id="generalHealth.weight.weight">
+              <select class="form-select ehr-form-select ehr-form-select-xxs" id="sidebar-ehr-weight-unit" data-object-id="generalHealth.weight.unit">
+                <option value="lbs">lbs</option>
+                <option value="kg">kg</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-height-feet" class="form-label ehr-form-label">Height</label>
+            <div class="input-group">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-height-feet" placeholder="feet" min="0" max="8" data-object-id="generalHealth.height.feet">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-height-inches" placeholder="inches" min="0" max="11" data-object-id="generalHealth.height.inches">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs d-none" id="sidebar-ehr-height-cm" placeholder="cm" min="0" max="280" data-object-id="generalHealth.height.height">
+              <select class="form-select ehr-form-select ehr-form-select-xxs" id="sidebar-ehr-height-unit" data-object-id="generalHealth.height.unit">
+                <option value="cm">cm</option>
+                <option value="inches">ft/in</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-waist-circumference" class="form-label ehr-form-label">Waist circumference</label>
+            <div class="input-group">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-waist-circumference" min="1" max="200" data-object-id="generalHealth.waistCircumference.waistCircumference">
+              <select class="form-select ehr-form-select ehr-form-select-xxs" id="sidebar-ehr-waist-circumference-unit" data-object-id="generalHealth.waistCircumference.unit">
+                <option value="inches">in</option>
+                <option value="cm">cm</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-hip-circumference" class="form-label ehr-form-label">Hip circumference</label>
+            <div class="input-group">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-hip-circumference" min="1" max="200" data-object-id="generalHealth.hipCircumference.hipCircumference">
+              <select class="form-select ehr-form-select ehr-form-select-xxs" id="sidebar-ehr-hip-circumference-unit" data-object-id="generalHealth.hipCircumference.unit">
+                <option value="inches">in</option>
+                <option value="cm">cm</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-blood-type" class="form-label ehr-form-label">Blood type</label>
+            <select class="form-select ehr-form-select ehr-form-select-xxs" id="sidebar-ehr-blood-type" data-object-id="generalHealth.bloodType.bloodType">
+              <option value=""></option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-vision-correction" class="form-label ehr-form-label">Vision correction</label>
+            <select class="form-select ehr-form-select ehr-form-select-xs" id="sidebar-ehr-vision-correction" data-object-id="generalHealth.visionCorrection.visionCorrectionType">
+              <option value=""></option>
+              <option value="Glasses">Glasses</option>
+              <option value="Contacts">Contacts</option>
+              <option value="LASIK">LASIK</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Medical History -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-ehr-medical-history-collapse" aria-controls="sidebar-ehr-medical-history-collapse">
+        Medical History
+      </button>
+    </h2>
+    <div id="sidebar-ehr-medical-history-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        
+          <div class="overlay-members-only">
+  <span class="badge bg-danger shadow">Members Only</span>
+</div>
+        
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Medications -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-ehr-medications-collapse" aria-controls="sidebar-ehr-medications-collapse">
+        Medications
+      </button>
+    </h2>
+    <div id="sidebar-ehr-medications-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        
+          <div class="overlay-members-only">
+  <span class="badge bg-danger shadow">Members Only</span>
+</div>
+        
+        <div class="medications">
+          <div class="current-medications text-small overlay-blur">
+            <div class="ehr-content-header">Current</div>
+          </div>
+          <div class="past-medications text-small overlay-blur">
+            <div class="ehr-content-header">Past</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Demographics -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-ehr-demographics-collapse" aria-controls="sidebar-ehr-demographics-collapse">
+        Demographics
+      </button>
+    </h2>
+    <div id="sidebar-ehr-demographics-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        <div class="overlay-coming-soon">
+  <span class="badge bg-info shadow">Coming Soon</span>
+</div>
+        <form id="sidebar-ehr-demographics-form" class="overlay-blur">
+          <div class="row">
+            <div class="col-auto me-3 ehr-form-group">
+              <label for="ehr-age" class="form-label ehr-form-label">Age</label>
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-age" min="0" max="120" data-object-id="demographics.age">
+            </div>
+            <div class="col-auto ehr-form-group">
+              <label for="ehr-biological-sex" class="form-label ehr-form-label">Biological sex</label>
+              <select class="form-select ehr-form-select ehr-form-select-s" id="sidebar-ehr-biological-sex" data-object-id="demographics.sex">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-race-ethnicity" class="form-label ehr-form-label">Race and ethnicity</label>
+            <input type="text" class="form-control ehr-form-control ehr-form-control-s" id="sidebar-ehr-race-ethnicity" maxlength="50" data-object-id="demographics.raceEthnicity">
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-gender-identity" class="form-label ehr-form-label">Gender identity</label>
+            <input type="text" class="form-control ehr-form-control ehr-form-control-s" id="sidebar-ehr-gender-identity" maxlength="100" data-object-id="demographics.genderIdentity">
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-preferred-language" class="form-label ehr-form-label">Preferred language</label>
+            <input type="text" class="form-control ehr-form-control ehr-form-control-s" id="sidebar-ehr-preferred-language" maxlength="30" data-object-id="demographics.preferredLanguage">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Vital Signs -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-ehr-vital-signs-collapse" aria-controls="sidebar-ehr-vital-signs-collapse">
+        Vital Signs
+      </button>
+    </h2>
+    <div id="sidebar-ehr-vital-signs-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        <div class="overlay-coming-soon">
+  <span class="badge bg-info shadow">Coming Soon</span>
+</div>
+        <form id="sidebar-ehr-vital-signs-form" class="overlay-blur">
+          <div class="ehr-form-group">
+            <label for="ehr-heart-rate" class="form-label ehr-form-label">Heart rate</label>
+            <div class="d-flex align-items-center">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-heart-rate" min="30" max="220" data-object-id="vitalSigns.heartRate.heartRate">
+              <span class="ms-2 text-small">bpm</span>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-systolic" class="form-label ehr-form-label">Blood pressure</label>
+            <div class="d-flex align-items-center">
+              <div class="input-group align-items-center">
+                <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-systolic" placeholder="systolic" min="60" max="250" data-object-id="vitalSigns.systolic">
+                <span class="input-group-text ehr-input-group-text-xs">/</span>
+                <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-diastolic" placeholder="diastolic" min="40" max="150" data-object-id="vitalSigns.diastolic">
+                <span class="ms-2 text-small">mmHg</span>
+              </div>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-respiratory-rate" class="form-label ehr-form-label">Respiratory rate</label>
+            <div class="d-flex align-items-center">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-respiratory-rate" min="8" max="40" data-object-id="vitalSigns.respiratoryRate.respiratoryRate">
+              <span class="ms-2 text-small">breaths/min</span>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-oxygen-saturation" class="form-label ehr-form-label">Oxygen saturation</label>
+            <div class="d-flex align-items-center">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-oxygen-saturation" min="70" max="100" data-object-id="vitalSigns.oxygenSaturation.oxygenSaturation">
+              <span class="ms-2 text-small">%</span>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-body-temperature" class="form-label ehr-form-label">Body temperature</label>
+            <div class="input-group">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-body-temperature" step="0.1" min="95" max="108" data-object-id="vitalSigns.bodyTemperature.bodyTemperature">
+              <select class="form-select ehr-form-select ehr-form-select-xxs" id="sidebar-ehr-temperature-unit" data-object-id="vitalSigns.bodyTemperature.unit">
+                <option value="°F">°F</option>
+                <option value="°C">°C</option>
+              </select>
+            </div>
+          </div>
+          <div class="ehr-form-group">
+            <label for="ehr-pain-scale" class="form-label ehr-form-label">Pain scale</label>
+            <div class="d-flex align-items-center">
+              <input type="number" class="form-control ehr-form-control ehr-form-control-xxs" id="sidebar-ehr-pain-scale" min="0" max="10" data-object-id="vitalSigns.painScale.painLevel">
+              <span class="ms-2 text-small">(0 to 10)</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Social History -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-ehr-social-history-collapse" aria-controls="sidebar-ehr-social-history-collapse">
+        Social History
+      </button>
+    </h2>
+    <div id="sidebar-ehr-social-history-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        <div class="overlay-coming-soon">
+  <span class="badge bg-info shadow">Coming Soon</span>
+</div>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Pharmacy Information -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-ehr-pharmacy-collapse" aria-controls="sidebar-ehr-pharmacy-collapse">
+        Pharmacy Information
+      </button>
+    </h2>
+    <div id="sidebar-ehr-pharmacy-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        <div class="overlay-coming-soon">
+  <span class="badge bg-info shadow">Coming Soon</span>
+</div>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Insurance Information -->
+  <div class="accordion-item">
+    <h2 class="accordion-header ehr-accordion-header">
+      <button class="accordion-button small ehr-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-ehr-insurance-collapse" aria-controls="sidebar-ehr-insurance-collapse">
+        Insurance Information
+      </button>
+    </h2>
+    <div id="sidebar-ehr-insurance-collapse" class="accordion-collapse collapse">
+      <div class="accordion-body ehr-accordion-body position-relative">
+        <div class="overlay-coming-soon">
+  <span class="badge bg-info shadow">Coming Soon</span>
+</div>
+        <div id="ehr-primaryInsurance" class="overlay-blur">
+          <div class="ehr-content-header">Primary</div>
+          <div class="insurance-content"></div>
+        </div>
+        <div id="ehr-secondaryInsurance" class="overlay-blur">
+          <div class="ehr-content-header">Secondary</div>
+          <div class="insurance-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+          </div>
+          <!-- End membership-sidebar -->
+
+        </div>
+      </div>
+      <!-- End main-body -->
+
+    </div>
+
+    <footer class="mt-auto">
+  <div class="container align-bottom mb-1 mt-3 text-tiny">
+    <a class="text-decoration-none external-link doctor-referral-link-footer" href="https://zocdoc.pxf.io/doctronic-main-link" target="_blank">Always discuss Doctronic output with a doctor</a>. Doctronic is not a doctor, does not practice medicine, and does not provide medical advice or patient care. By using Doctronic you agree to our <a class="text-decoration-none" href="/terms-of-service.html">Terms of Service</a> & <a class="text-decoration-none" href="/privacy-policy.html">Privacy Policy</a>.  &nbsp; ©
+    <img src="https://static.doctronic.ai/img/doctronic-icon.svg" alt="Logo" width="9" height="8">
+    Doctronic. Made with ❤️ in NYC 🗽
+  </div>
+</footer>
+
+<!-- Doctronic scripts -->
+<script>window.isLoggedIn = JSON.parse("false");</script> <!-- Strange syntax but this keeps all the linters happy -->
+<script id="insurance-template" type="text/x-jinja2-template">
+
+
+  <div class="insurance-details text-small">
+
+    {% if insurance.providerName %}
+      <div>
+        Provider name: {{ insurance.providerName }}
+        <br>
+      </div>
+    {% endif %}
+
+    {% if insurance.policyNumber %}
+      <div>
+        Policy number: {{ insurance.policyNumber }}
+        <br>
+      </div>
+    {% endif %}
+
+    {% if insurance.groupNumber %}
+      <div>
+        Group number: {{ insurance.groupNumber }}
+        <br>
+      </div>
+    {% endif %}
+
+    {% if insurance.effectiveDate %}
+      <div>
+        Effective date: {{ insurance.effectiveDate }}
+        <br>
+      </div>
+    {% endif %}
+
+    {% if insurance.expirationDate %}
+      <div>
+        Expiration date: {{ insurance.expirationDate }}
+        <br>
+      </div>
+    {% endif %}
+
+    {% if insurance.coverageType %}
+      <div>
+        Coverage type: {{ insurance.coverageType }}
+        <br>
+      </div>
+    {% endif %}
+
+    {% if insurance.primaryInsured %}
+      <div class="ehr-content-header">Primary Insured</div>
+      <div class="ehr-content-item">
+        {% if insurance.primaryInsured.insured_name %}
+          Name: {{ insurance.primaryInsured.insured_name }}
+          <br>
+        {% endif %}
+        {% if insurance.primaryInsured.relationship %}
+          Relationship: {{ insurance.primaryInsured.relationship }}
+          <br>
+        {% endif %}
+        {% if insurance.primaryInsured.date_of_birth %}
+          Date of birth: {{ insurance.primaryInsured.date_of_birth }}
+          <br>
+        {% endif %}
+      </div>
+    {% endif %}
+
+  </div>
+  <hr>
+
+</script>
+<script id="medical-history-template" type="text/x-jinja2-template">
+
+
+  <div class="medical-history">
+
+    {% if medicalHistory.allergiesAndAdverseReactions %}
+      <div class="allergies-adverse-reactions text-small">
+        <div class="ehr-content-header">Allergies and Adverse Reactions</div>
+        {% for reaction in medicalHistory.allergiesAndAdverseReactions %}
+          <div class="ehr-content-item">
+            {% if reaction.reactionType %}
+              Reaction type: {{ reaction.reactionType }}
+              <br>
+            {% endif %}
+            {% if reaction.substance %}
+              Substance: {{ reaction.substance }}
+              <br>
+            {% endif %}
+            {% if reaction.reaction %}
+              Reaction: {{ reaction.reaction }}
+              <br>
+            {% endif %}
+            {% if reaction.severity %}
+              Severity: {{ reaction.severity }}
+              <br>
+            {% endif %}
+            {% if reaction.dateIdentified %}
+              Date identified: {{ reaction.dateIdentified }}
+              <br>
+            {% endif %}
+            {% if reaction.dateResolved %}
+              Date resolved:{{ reaction.dateResolved }}
+              <br>
+            {% endif %}
+            {% if reaction.status %}
+              Status: {{ reaction.status }}
+              <br>
+            {% endif %}
+            {% if reaction.notes %}
+              Notes: {{ reaction.notes }}
+              <br>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if medicalHistory.surgicalHistory %}
+      <div class="surgical-history text-small">
+        <div class="ehr-content-header">Surgical History</div>
+        {% for surgery in medicalHistory.surgicalHistory %}
+          <div class="ehr-content-item">
+            {% if surgery.procedureName %}
+              Procedure name: {{ surgery.procedureName }}
+              <br>
+            {% endif %}
+            {% if surgery.reason %}
+              Reason: {{ surgery.reason }}
+              <br>
+            {% endif %}
+            {% if surgery.surgeryDate %}
+              Surgery date: {{ surgery.surgeryDate }}
+              <br>
+            {% endif %}
+            {% if surgery.surgeon %}
+              Surgeon: {{ surgery.surgeon }}
+              <br>
+            {% endif %}
+            {% if surgery.hospital %}
+              Hospital: {{ surgery.hospital }}
+              <br>
+            {% endif %}
+            {% if surgery.complications %}
+              Complications: {{ surgery.complications }}
+              <br>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if medicalHistory.familyMedicalHistory %}
+      <div class="family-medical-history text-small">
+        <div class="ehr-content-header">Family Medical History</div>
+        {% for family in medicalHistory.familyMedicalHistory %}
+          <div class="ehr-content-item">
+            {% if family.relation %}
+              Relation: {{ family.relation }}
+              <br>
+            {% endif %}
+            {% if family.condition %}
+              Condition: {{ family.condition }}
+              <br>
+            {% endif %}
+            {% if family.ageAtOnset %}
+              Age at onset: {{ family.ageAtOnset }}
+              <br>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if medicalHistory.knownImplants %}
+      <div class="known-implants text-small">
+        <div class="ehr-content-header">Known Implants</div>
+        {% for implant in medicalHistory.knownImplants %}
+          <div class="ehr-content-item">
+            {% if implant.implantName %}
+              Implant name: {{ implant.implantName }}
+              <br>
+            {% endif %}
+            {% if implant.manufacturer %}
+              Manufacturer: {{ implant.manufacturer }}
+              <br>
+            {% endif %}
+            {% if implant.implantDate %}
+              Implant date: {{ implant.implantDate }}
+              <br>
+            {% endif %}
+            {% if implant.mriCompatibility %}
+              Mri compatibility: {{ implant.mriCompatibility }}
+              <br>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="obstetric-information text-small">
+      <div class="ehr-content-header">Obstetric Information</div>
+      {% if medicalHistory.obstetricInformation.pregnancies %}
+        {% if medicalHistory.obstetricInformation.numberOfPregnancies %}
+          Number of pregnancies: {{ medicalHistory.obstetricInformation.numberOfPregnancies }}
+        {% endif %}
+        {% if medicalHistory.obstetricInformation.numberOfDeliveries %}
+          Number of deliveries: {{ medicalHistory.obstetricInformation.numberOfDeliveries }}
+        {% endif %}
+        {% for pregnancy in medicalHistory.obstetricInformation.pregnancies %}
+          <div class="ehr-content-item">
+            {% if pregnancy.outcome %}
+              Pregnancy outcome: {{ pregnancy.outcome }}
+              <br>
+            {% endif %}
+            {% if pregnancy.deliveryType %}
+              Delivery type: {{ pregnancy.deliveryType }}
+              <br>
+            {% endif %}
+            {% if pregnancy.deliveryDate %}
+              Delivery date: {{ pregnancy.deliveryDate }}
+              <br>
+            {% endif %}
+            {% if pregnancy.gestationalAge %}
+              Gestational age (weeks): {{ pregnancy.gestationalAge }}
+              <br>
+            {% endif %}
+            {% if pregnancy.complications %}
+              Complications: {{ pregnancy.complications }}
+              <br>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+  </div>
+
+</script>
+<script id="medications-template" type="text/x-jinja2-template">
+
+
+  <div class="medications">
+
+    {% if medications.current %}
+      <div class="current-medications text-small">
+        <div class="ehr-content-header">Current</div>
+        {% for currentMedication in medications.current %}
+          <div class="ehr-content-item">
+            {% if currentMedication.medicationName %}
+              Medication Name: {{ currentMedication.medicationName }}
+              <br>
+            {% endif %}
+            {% if currentMedication.dosage %}
+              Dosage: {{ currentMedication.dosage }}
+              <br>
+            {% endif %}
+            {% if currentMedication.frequency %}
+              Frequency: {{ currentMedication.frequency }}
+              <br>
+            {% endif %}
+            {% if currentMedication.startDate %}
+              Start Date: {{ currentMedication.startDate }}
+              <br>
+            {% endif %}
+            {% if currentMedication.prescribingDoctor %}
+              Prescribing Doctor: {{ currentMedication.prescribingDoctor }}
+              <br>
+            {% endif %}
+            {% if currentMedication.reason %}
+              Reason: {{ currentMedication.reason }}
+              <br>
+            {% endif %}
+            {% if currentMedication.refillsRemaining %}
+              Refills Remaining: {{ currentMedication.refillsRemaining }}
+              <br>
+            {% endif %}
+            {% if currentMedication.pharmacy %}
+              Pharmacy: {{ currentMedication.pharmacy }}
+              <br>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if medications.past %}
+      <div class="past-medications text-small">
+        <div class="ehr-content-header">Past</div>
+        {% for pastMedication in medications.past %}
+          <div class="ehr-content-item">
+            {% if pastMedication.medicationName %}
+              Medication Name: {{ pastMedication.medicationName }}
+              <br>
+            {% endif %}
+            {% if pastMedication.dosage %}
+              Dosage: {{ pastMedication.dosage }}
+              <br>
+            {% endif %}
+            {% if pastMedication.frequency %}
+              Frequency: {{ pastMedication.frequency }}
+              <br>
+            {% endif %}
+            {% if pastMedication.startDate %}
+              Start Date: {{ pastMedication.startDate }}
+              <br>
+            {% endif %}
+            {% if pastMedication.endDate %}
+              End Date: {{ pastMedication.endDate }}
+              <br>
+            {% endif %}
+            {% if pastMedication.prescribingDoctor %}
+              Prescribing Doctor: {{ pastMedication.prescribingDoctor }}
+              <br>
+            {% endif %}
+            {% if pastMedication.reason %}
+              Reason: {{ pastMedication.reason }}
+              <br>
+            {% endif %}
+            {% if pastMedication.refillsRemaining %}
+              Refills Remaining: {{ pastMedication.refillsRemaining }}
+              <br>
+            {% endif %}
+            {% if pastMedication.pharmacy %}
+              Pharmacy: {{ pastMedication.pharmacy }}
+              <br>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+  </div>
+
+</script>
+<script id="pharmacy-information-template" type="text/x-jinja2-template">
+
+
+  <div class="pharmacy-details text-small">
+
+    {% if pharmacyInformation.primaryPharmacy %}
+      <div class="ehr-content-header">Primary Pharmacy</div>
+
+      {% if pharmacyInformation.primaryPharmacy.pharmacyName %}
+        Pharmacy name: {{ pharmacyInformation.primaryPharmacy.pharmacyName }}
+        <br>
+      {% endif %}
+
+      {% if pharmacyInformation.primaryPharmacy.phoneNumber %}
+        Phone number: {{ pharmacyInformation.primaryPharmacy.phoneNumber }}
+        <br>
+      {% endif %}
+
+      {% if pharmacyInformation.primaryPharmacy.address %}
+        <div class="ehr-content-item">
+          {% if pharmacyInformation.primaryPharmacy.address.line1 %}
+            Address line 1: {{ pharmacyInformation.primaryPharmacy.address.line1 }}
+            <br>
+          {% endif %}
+
+          {% if pharmacyInformation.primaryPharmacy.address.line2 %}
+            Address line 2: {{ pharmacyInformation.primaryPharmacy.address.line2 }}
+            <br>
+          {% else %}
+            Address line 2: N/A
+            <br>
+          {% endif %}
+
+          {% if pharmacyInformation.primaryPharmacy.address.city %}
+            City: {{ pharmacyInformation.primaryPharmacy.address.city }}
+            <br>
+          {% endif %}
+
+          {% if pharmacyInformation.primaryPharmacy.address.stateProvinceRegion %}
+            State/Province/Region: {{ pharmacyInformation.primaryPharmacy.address.stateProvinceRegion }}
+            <br>
+          {% endif %}
+
+          {% if pharmacyInformation.primaryPharmacy.address.postalCode %}
+            Postal code: {{ pharmacyInformation.primaryPharmacy.address.postalCode }}
+            <br>
+          {% endif %}
+
+          {% if pharmacyInformation.primaryPharmacy.address.country %}
+            Country: {{ pharmacyInformation.primaryPharmacy.address.country }}
+            <br>
+          {% endif %}
+        </div>
+      {% endif %}
+
+    {% endif %}
+
+  </div>
+
+</script>
+<script id="social-history-template" type="text/x-jinja2-template">
+
+
+  <div class="social-history">
+
+    {% if socialHistory.children %}
+      <div class="children text-small">
+        <div class="ehr-content-header">Children</div>
+        {% if socialHistory.children.numberOfChildren %}
+          Number of children: {{ socialHistory.children.numberOfChildren }}
+          <br>
+        {% endif %}
+        {% for child in socialHistory.children.children %}
+          <div class="ehr-content-item">
+            {% if child.childName %}
+              Name: {{ child.childName }}
+              <br>
+            {% endif %}
+            {% if child.dateOfBirth %}
+              Date of birth: {{ child.dateOfBirth }}
+              <br>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if socialHistory.dietaryInformation %}
+      <div class="dietary-information text-small">
+        <div class="ehr-content-header">Dietary Information</div>
+        {% if socialHistory.dietaryInformation.dietType %}
+          Diet type: {{ socialHistory.dietaryInformation.dietType }}
+          <br>
+        {% endif %}
+        {% if socialHistory.dietaryInformation.restrictions %}
+          Restrictions: {{ socialHistory.dietaryInformation.restrictions.join(", ") }}
+          <br>
+        {% endif %}
+        {% if socialHistory.dietaryInformation.typicalMeals %}
+          <div class="ehr-content-item">
+            {% if socialHistory.dietaryInformation.typicalMeals.breakfast %}
+              Breakfast: {{ socialHistory.dietaryInformation.typicalMeals.breakfast }}
+              <br>
+            {% endif %}
+            {% if socialHistory.dietaryInformation.typicalMeals.lunch %}
+              Lunch: {{ socialHistory.dietaryInformation.typicalMeals.lunch }}
+              <br>
+            {% endif %}
+            {% if socialHistory.dietaryInformation.typicalMeals.dinner %}
+              Dinner: {{ socialHistory.dietaryInformation.typicalMeals.dinner }}
+              <br>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% if socialHistory.dietaryInformation.waterIntake %}
+          Water intake: {{ socialHistory.dietaryInformation.waterIntake }} {{ socialHistory.dietaryInformation.waterIntakeUnit }}
+          <br>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if socialHistory.drugUse %}
+      <div class="drug-use text-small">
+        <div class="ehr-content-header">Drug Use</div>
+        {% if socialHistory.drugUse.substance %}
+          Substance: {{ socialHistory.drugUse.substance }}
+          <br>
+        {% endif %}
+        {% if socialHistory.drugUse.frequency %}
+          Frequency: {{ socialHistory.drugUse.frequency }}
+          <br>
+        {% endif %}
+        {% if socialHistory.drugUse.route %}
+          Route: {{ socialHistory.drugUse.route }}
+          <br>
+        {% endif %}
+        {% if socialHistory.drugUse.lastUse %}
+          Last use: {{ socialHistory.drugUse.lastUse }}
+          <br>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if socialHistory.exerciseHabits %}
+      <div class="exercise-habits text-small">
+        <div class="ehr-content-header">Exercise Habits</div>
+        {% if socialHistory.exerciseHabits.frequency %}
+          Frequency: {{ socialHistory.exerciseHabits.frequency }}
+          <br>
+        {% endif %}
+        {% if socialHistory.exerciseHabits.exerciseTypes %}
+          Exercise types: {{ socialHistory.exerciseHabits.exerciseTypes.join(", ") }}
+          <br>
+        {% endif %}
+        {% if socialHistory.exerciseHabits.duration %}
+          Duration (minutes): {{ socialHistory.exerciseHabits.duration }}
+          <br>
+        {% endif %}
+        {% if socialHistory.exerciseHabits.intensity %}
+          Intensity: {{ socialHistory.exerciseHabits.intensity }}
+          <br>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if socialHistory.maritalStatus %}
+      <div class="marital-status text-small">
+        <div class="ehr-content-header">Marital Status</div>
+        Marital status: {{ socialHistory.maritalStatus.value }}
+        <br>
+      </div>
+    {% endif %}
+
+    {% if socialHistory.occupation %}
+      <div class="occupation text-small">
+        <div class="ehr-content-header">Occupation</div>
+        {% if socialHistory.occupation.jobTitle %}
+          Job title: {{ socialHistory.occupation.jobTitle }}
+          <br>
+        {% endif %}
+        {% if socialHistory.occupation.employer %}
+          Employer: {{ socialHistory.occupation.employer }}
+          <br>
+        {% endif %}
+        {% if socialHistory.occupation.startDate %}
+          Start date: {{ socialHistory.occupation.startDate }}
+          <br>
+        {% endif %}
+        {% if socialHistory.occupation.endAge %}
+          End age: {{ socialHistory.occupation.endAge }}
+          <br>
+        {% else %}
+          End age: N/A
+          <br>
+        {% endif %}
+        {% if socialHistory.occupation.hazards %}
+          Hazards: {{ socialHistory.occupation.hazards.join(", ") }}
+          <br>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if socialHistory.sexualHistory %}
+      <div class="sexual-history text-small">
+        <div class="ehr-content-header">Sexual History</div>
+        {% if socialHistory.sexualHistory.sexuallyActive %}
+          Sexually active: Yes
+          <br>
+        {% else %}
+          Sexually active: No
+          <br>
+        {% endif %}
+        {% if socialHistory.sexualHistory.orientation %}
+          Orientation: {{ socialHistory.sexualHistory.orientation }}
+          <br>
+        {% endif %}
+        {% if socialHistory.sexualHistory.partners %}
+          Partners: {{ socialHistory.sexualHistory.partners }}
+          <br>
+        {% endif %}
+        {% if socialHistory.sexualHistory.birthControlMethod %}
+          Birth control method: {{ socialHistory.sexualHistory.birthControlMethod }}
+          <br>
+        {% endif %}
+        {% if socialHistory.sexualHistory.stdHistory %}
+          STD history: {{ socialHistory.sexualHistory.stdHistory.join(", ") }}
+          <br>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if socialHistory.alcoholUse %}
+      <div class="alcohol-use text-small">
+        <div class="ehr-content-header">Alcohol Use</div>
+        {% if socialHistory.alcoholUse.frequency %}
+          Frequency: {{ socialHistory.alcoholUse.frequency }}
+          <br>
+        {% endif %}
+        {% if socialHistory.alcoholUse.alcoholType %}
+          Alcohol type: {{ socialHistory.alcoholUse.alcoholType.join(", ") }}
+          <br>
+        {% endif %}
+        {% if socialHistory.alcoholUse.quantity %}
+          Quantity: {{ socialHistory.alcoholUse.quantity }}
+          <br>
+        {% endif %}
+        {% if socialHistory.alcoholUse.lastUse %}
+          Last use: {{ socialHistory.alcoholUse.lastUse }}
+          <br>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if socialHistory.tobaccoUse %}
+      <div class="tobacco-use text-small">
+        <div class="ehr-content-header">Tobacco Use</div>
+        {% if socialHistory.tobaccoUse.status %}
+          Status: {{ socialHistory.tobaccoUse.status }}
+          <br>
+        {% endif %}
+        {% if socialHistory.tobaccoUse.tobaccoType %}
+          Tobacco type: {{ socialHistory.tobaccoUse.tobaccoType }}
+          <br>
+        {% endif %}
+        {% if socialHistory.tobaccoUse.startAge %}
+          Start age: {{ socialHistory.tobaccoUse.startAge }}
+          <br>
+        {% endif %}
+        {% if socialHistory.tobaccoUse.endAge %}
+          End age: {{ socialHistory.tobaccoUse.endAge }}
+          <br>
+        {% else %}
+          End age: N/A
+          <br>
+        {% endif %}
+        {% if socialHistory.tobaccoUse.quantity %}
+          Quantity: {{ socialHistory.tobaccoUse.quantity }}
+          <br>
+        {% endif %}
+      </div>
+    {% endif %}
+
+  </div>
+
+</script>
+<script id="symptom-template" type="text/x-jinja2-template">
+
+
+
+
+  <div class="symptom ehr-content-item text-small">
+    {{ symptom.symptom }}{% if symptom.severity %}, {{ symptom.severity | lower }}{% endif %}{% if symptom.frequency %}, {{ symptom.frequency | lower }}{% endif %}{% if symptom.onsetDate %}, started around {{ symptom.onsetDate }}{% endif %}.{% if is_past %}{% if symptom.treatment %} Treatment involved {{ symptom.treatment | lower }};{% endif %}{% if symptom.resolutionDate %} Resolved around {{ symptom.resolutionDate }};{% endif %}{% endif %}{% if symptom.associatedFactors %} Associated factors included {{ symptom.associatedFactors | lower }}.{% endif %}
+  </div>
+
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1285428859283351');
+  fbq('track', 'PageView');
+</script>
+<!-- End Facebook Pixel Code -->
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-5Q6DSDPN');
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11305805895"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D11T4G0X7G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'AW-11305805895');  // Send a page view event to Google AdWords
+  gtag('config', 'G-D11T4G0X7G');  // Send a page view event to Google Analytics
+</script>
+<!-- Google reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LeIkq8mAAAAAEpswDsrBZ2qafcYihfOB9GufUiO"></script>
+<!-- Microsoft Advertising UET Tag -->
+<script>
+(function (w, d, t, r, u) {
+var f, n, i;
+(w[u] = w[u] || []),
+(f = function () {
+var o = { ti: "343156308", enableAutoSpaTracking: true };
+(o.q = w[u]), (w[u] = new UET(o)), w[u].push("pageLoad");
+}),
+(n = d.createElement(t)),
+(n.src = r),
+(n.async = 1),
+(n.onload = n.onreadystatechange =
+function () {
+var s = this.readyState;
+(s && s !== "loaded" && s !== "complete") || (f(), (n.onload = n.onreadystatechange = null));
+}),
+(i = d.getElementsByTagName(t)[0]),
+i.parentNode.insertBefore(n, i);
+})(window, document, "script", "//bat.bing.com/bat.js", "uetq");
+</script>
+<!-- Plausible Analytics -->
+<script defer data-domain="doctronic.ai" src="https://plausible.io/js/script.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+<script>
+window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+</script>
+<!-- Reddit Pixel -->
+<script>
+!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_fsrc1rt4latp');rdt('track', 'PageVisit');
+</script>
+<!-- EmbedSocial -->
+<div class="embedsocial-forms-iframe" data-ref="327bebf95bf5dd4a3fd68011cd48f9baf5c13c85" data-widget="true" data-height="auto">
+</div>
+  </body>
+</html>
